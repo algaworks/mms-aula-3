@@ -1,0 +1,1598 @@
+{
+	"info": {
+		"_postman_id": "98da72e4-71ac-46f1-9489-5e2d6bcbf634",
+		"name": "Algadelivery Delivery Tracking and Courier Management API",
+		"description": "API para rastreamento e gerenciamento de encomendas e gestão de entregadores do sistema Algadelivery.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4405010"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "deliveries",
+							"item": [
+								{
+									"name": "{deliveryId}",
+									"item": [
+										{
+											"name": "placement",
+											"item": [
+												{
+													"name": "Submete uma encomenda para processamento.",
+													"request": {
+														"method": "POST",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/placement",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"deliveries",
+																":deliveryId",
+																"placement"
+															],
+															"variable": [
+																{
+																	"key": "deliveryId",
+																	"value": "d09567df-10a0-4032-bb44-549ee9bc53b3",
+																	"description": "(Required) ID da encomenda a ser submetida."
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "encomenda submetida com sucesso.",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/submission",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"deliveries",
+																		":deliveryId",
+																		"submission"
+																	],
+																	"variable": [
+																		{
+																			"key": "deliveryId"
+																		}
+																	]
+																}
+															},
+															"status": "No Content",
+															"code": 204,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														},
+														{
+															"name": "Requisição inválida",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/submission",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"deliveries",
+																		":deliveryId",
+																		"submission"
+																	],
+																	"variable": [
+																		{
+																			"key": "deliveryId"
+																		}
+																	]
+																}
+															},
+															"status": "Bad Request",
+															"code": 400,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														},
+														{
+															"name": "encomenda não encontrada.",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/submission",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"deliveries",
+																		":deliveryId",
+																		"submission"
+																	],
+																	"variable": [
+																		{
+																			"key": "deliveryId"
+																		}
+																	]
+																}
+															},
+															"status": "Not Found",
+															"code": 404,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "pickups",
+											"item": [
+												{
+													"name": "Registra a retirada de uma encomenda pelo entregador.",
+													"request": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n    \"courierId\": \"981d0657-deed-4ed3-8440-8a40f4b6bd34\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/pickups",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"deliveries",
+																":deliveryId",
+																"pickups"
+															],
+															"variable": [
+																{
+																	"key": "deliveryId",
+																	"value": "d09567df-10a0-4032-bb44-549ee9bc53b3",
+																	"description": "(Required) ID da encomenda a ser marcada como retirada."
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "encomenda marcada como retirada com sucesso.",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/pickups",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"deliveries",
+																		":deliveryId",
+																		"pickups"
+																	],
+																	"variable": [
+																		{
+																			"key": "deliveryId"
+																		}
+																	]
+																}
+															},
+															"status": "No Content",
+															"code": 204,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														},
+														{
+															"name": "Requisição inválida",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/pickups",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"deliveries",
+																		":deliveryId",
+																		"pickups"
+																	],
+																	"variable": [
+																		{
+																			"key": "deliveryId"
+																		}
+																	]
+																}
+															},
+															"status": "Bad Request",
+															"code": 400,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														},
+														{
+															"name": "encomenda não encontrada.",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/pickups",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"deliveries",
+																		":deliveryId",
+																		"pickups"
+																	],
+																	"variable": [
+																		{
+																			"key": "deliveryId"
+																		}
+																	]
+																}
+															},
+															"status": "Not Found",
+															"code": 404,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "completion",
+											"item": [
+												{
+													"name": "Registra a conclusão de uma encomenda.",
+													"request": {
+														"method": "POST",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/completion",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"deliveries",
+																":deliveryId",
+																"completion"
+															],
+															"variable": [
+																{
+																	"key": "deliveryId",
+																	"value": "d09567df-10a0-4032-bb44-549ee9bc53b3",
+																	"description": "(Required) ID da encomenda a ser marcada como concluída."
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "encomenda marcada como concluída com sucesso.",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/completion",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"deliveries",
+																		":deliveryId",
+																		"completion"
+																	],
+																	"variable": [
+																		{
+																			"key": "deliveryId"
+																		}
+																	]
+																}
+															},
+															"status": "No Content",
+															"code": 204,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														},
+														{
+															"name": "Requisição inválida",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/completion",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"deliveries",
+																		":deliveryId",
+																		"completion"
+																	],
+																	"variable": [
+																		{
+																			"key": "deliveryId"
+																		}
+																	]
+																}
+															},
+															"status": "Bad Request",
+															"code": 400,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														},
+														{
+															"name": "encomenda não encontrada.",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId/completion",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"deliveries",
+																		":deliveryId",
+																		"completion"
+																	],
+																	"variable": [
+																		{
+																			"key": "deliveryId"
+																		}
+																	]
+																}
+															},
+															"status": "Not Found",
+															"code": 404,
+															"_postman_previewlanguage": "text",
+															"header": [],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "Edita os detalhes de uma encomenda existente.",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"sender\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"recipient\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"items\": [\n    {\n      \"name\": \"Livro de Spring\",\n      \"quantity\": 2\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"deliveries",
+														":deliveryId"
+													],
+													"variable": [
+														{
+															"key": "deliveryId",
+															"value": "ec20207c-a227-481c-a97f-3b24f5199069",
+															"description": "(Required) ID da encomenda a ser editada."
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "encomenda editada com sucesso.",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"sender\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"recipient\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"items\": [\n    {\n      \"name\": \"Livro de Java\",\n      \"quantity\": 2\n    }\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"deliveries",
+																":deliveryId"
+															],
+															"variable": [
+																{
+																	"key": "deliveryId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n  \"status\": \"WAITING_FOR_ASSIGNMENT\",\n  \"courierId\": \"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\n  \"placedAt\": \"1988-02-16T12:12:25.780Z\",\n  \"assignedAt\": \"1989-07-02T07:32:08.059Z\",\n  \"expectedDeliveryAt\": \"1959-08-16T01:07:42.137Z\",\n  \"fulfilledAt\": \"1976-11-13T23:51:58.263Z\",\n  \"distanceFee\": 15.5,\n  \"courierPayout\": 10,\n  \"totalCost\": 25.5,\n  \"totalItems\": 3,\n  \"sender\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"complement\": \"Apto 10\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\"\n  },\n  \"recipient\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"complement\": \"Apto 10\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\"\n  },\n  \"items\": [\n    {\n      \"id\": \"c1d2e3f4-a5b6-7890-1234-567890abcdef\",\n      \"name\": \"Teclado Mecânico\",\n      \"quantity\": 1\n    },\n    {\n      \"id\": \"c1d2e3f4-a5b6-7890-1234-567890abcdef\",\n      \"name\": \"Teclado Mecânico\",\n      \"quantity\": 1\n    }\n  ]\n}"
+												},
+												{
+													"name": "Requisição inválida (erros de validação ou encomenda não editável).",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"sender\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"recipient\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"items\": [\n    {\n      \"name\": \"Livro de Java\",\n      \"quantity\": 2\n    }\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"deliveries",
+																":deliveryId"
+															],
+															"variable": [
+																{
+																	"key": "deliveryId"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "encomenda não encontrada.",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"sender\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"recipient\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"items\": [\n    {\n      \"name\": \"Livro de Java\",\n      \"quantity\": 2\n    }\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"deliveries",
+																":deliveryId"
+															],
+															"variable": [
+																{
+																	"key": "deliveryId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Busca uma encomenda pelo ID.",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"deliveries",
+														":deliveryId"
+													],
+													"variable": [
+														{
+															"key": "deliveryId",
+															"value": "ec20207c-a227-481c-a97f-3b24f5199069",
+															"description": "(Required) ID da encomenda a ser buscada."
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "encomenda encontrada.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"deliveries",
+																":deliveryId"
+															],
+															"variable": [
+																{
+																	"key": "deliveryId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n  \"status\": \"WAITING_FOR_ASSIGNMENT\",\n  \"courierId\": \"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\n  \"placedAt\": \"1988-02-16T12:12:25.780Z\",\n  \"assignedAt\": \"1989-07-02T07:32:08.059Z\",\n  \"expectedDeliveryAt\": \"1959-08-16T01:07:42.137Z\",\n  \"fulfilledAt\": \"1976-11-13T23:51:58.263Z\",\n  \"distanceFee\": 15.5,\n  \"courierPayout\": 10,\n  \"totalCost\": 25.5,\n  \"totalItems\": 3,\n  \"sender\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"complement\": \"Apto 10\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\"\n  },\n  \"recipient\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"complement\": \"Apto 10\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\"\n  },\n  \"items\": [\n    {\n      \"id\": \"c1d2e3f4-a5b6-7890-1234-567890abcdef\",\n      \"name\": \"Teclado Mecânico\",\n      \"quantity\": 1\n    },\n    {\n      \"id\": \"c1d2e3f4-a5b6-7890-1234-567890abcdef\",\n      \"name\": \"Teclado Mecânico\",\n      \"quantity\": 1\n    }\n  ]\n}"
+												},
+												{
+													"name": "encomenda não encontrada.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/deliveries/:deliveryId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"deliveries",
+																":deliveryId"
+															],
+															"variable": [
+																{
+																	"key": "deliveryId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Cria um rascunho de uma nova encomenda.",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"sender\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"recipient\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"items\": [\n    {\n      \"name\": \"Livro de Java\",\n      \"quantity\": 2\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/deliveries",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"deliveries"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Rascunho da encomenda criado com sucesso.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"sender\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"recipient\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"items\": [\n    {\n      \"name\": \"Livro de Java\",\n      \"quantity\": 2\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/deliveries",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"deliveries"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n  \"status\": \"WAITING_FOR_ASSIGNMENT\",\n  \"courierId\": \"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\n  \"placedAt\": \"1988-02-16T12:12:25.780Z\",\n  \"assignedAt\": \"1989-07-02T07:32:08.059Z\",\n  \"expectedDeliveryAt\": \"1959-08-16T01:07:42.137Z\",\n  \"fulfilledAt\": \"1976-11-13T23:51:58.263Z\",\n  \"distanceFee\": 15.5,\n  \"courierPayout\": 10,\n  \"totalCost\": 25.5,\n  \"totalItems\": 3,\n  \"sender\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"complement\": \"Apto 10\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\"\n  },\n  \"recipient\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"complement\": \"Apto 10\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\"\n  },\n  \"items\": [\n    {\n      \"id\": \"c1d2e3f4-a5b6-7890-1234-567890abcdef\",\n      \"name\": \"Teclado Mecânico\",\n      \"quantity\": 1\n    },\n    {\n      \"id\": \"c1d2e3f4-a5b6-7890-1234-567890abcdef\",\n      \"name\": \"Teclado Mecânico\",\n      \"quantity\": 1\n    }\n  ]\n}"
+										},
+										{
+											"name": "Requisição inválida (erros de validação).",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"sender\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"recipient\": {\n    \"zipCode\": \"01001-000\",\n    \"street\": \"Rua da Consolação\",\n    \"number\": \"123\",\n    \"name\": \"João Silva\",\n    \"phone\": \"11999998888\",\n    \"complement\": \"Apto 10\"\n  },\n  \"items\": [\n    {\n      \"name\": \"Livro de Java\",\n      \"quantity\": 2\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/deliveries",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"deliveries"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Lista todas as encomendas com paginação.",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/deliveries?size=1&page=0",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"deliveries"
+											],
+											"query": [
+												{
+													"key": "sort",
+													"value": "aute veniam quis",
+													"description": "Critérios de ordenação",
+													"disabled": true
+												},
+												{
+													"key": "sort",
+													"value": "culpa qui",
+													"description": "Critérios de ordenação",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": "1"
+												},
+												{
+													"key": "page",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Lista de encomendas paginada.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/deliveries?page=0&size=20&sort=culpa qui",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"deliveries"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0",
+															"description": "Número da página (baseado em zero)."
+														},
+														{
+															"key": "size",
+															"value": "20",
+															"description": "Número de elementos por página."
+														},
+														{
+															"key": "sort",
+															"value": "culpa qui",
+															"description": "Critérios de ordenação"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"content\": [\n    {\n      \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n      \"status\": \"WAITING_FOR_ASSIGNMENT\",\n      \"courierId\": \"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\n      \"placedAt\": \"2010-07-27T02:38:08.058Z\",\n      \"assignedAt\": \"1994-01-27T02:09:19.730Z\",\n      \"expectedDeliveryAt\": \"1999-10-20T18:14:37.561Z\",\n      \"fulfilledAt\": \"1953-12-09T22:03:23.664Z\",\n      \"distanceFee\": 15.5,\n      \"courierPayout\": 10,\n      \"totalCost\": 25.5,\n      \"totalItems\": 3,\n      \"sender\": {\n        \"zipCode\": \"01001-000\",\n        \"street\": \"Rua da Consolação\",\n        \"number\": \"123\",\n        \"complement\": \"Apto 10\",\n        \"name\": \"João Silva\",\n        \"phone\": \"11999998888\"\n      },\n      \"recipient\": {\n        \"zipCode\": \"01001-000\",\n        \"street\": \"Rua da Consolação\",\n        \"number\": \"123\",\n        \"complement\": \"Apto 10\",\n        \"name\": \"João Silva\",\n        \"phone\": \"11999998888\"\n      },\n      \"items\": [\n        {\n          \"id\": \"c1d2e3f4-a5b6-7890-1234-567890abcdef\",\n          \"name\": \"Teclado Mecânico\",\n          \"quantity\": 1\n        },\n        {\n          \"id\": \"c1d2e3f4-a5b6-7890-1234-567890abcdef\",\n          \"name\": \"Teclado Mecânico\",\n          \"quantity\": 1\n        }\n      ]\n    },\n    {\n      \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n      \"status\": \"DELIVERED\",\n      \"courierId\": \"a1b2c3d4-e5f6-7890-1234-567890abcdef\",\n      \"placedAt\": \"1966-03-21T12:58:33.952Z\",\n      \"assignedAt\": \"1961-04-11T14:16:44.932Z\",\n      \"expectedDeliveryAt\": \"1974-08-06T14:48:58.961Z\",\n      \"fulfilledAt\": \"1998-04-08T22:29:37.650Z\",\n      \"distanceFee\": 15.5,\n      \"courierPayout\": 10,\n      \"totalCost\": 25.5,\n      \"totalItems\": 3,\n      \"sender\": {\n        \"zipCode\": \"01001-000\",\n        \"street\": \"Rua da Consolação\",\n        \"number\": \"123\",\n        \"complement\": \"Apto 10\",\n        \"name\": \"João Silva\",\n        \"phone\": \"11999998888\"\n      },\n      \"recipient\": {\n        \"zipCode\": \"01001-000\",\n        \"street\": \"Rua da Consolação\",\n        \"number\": \"123\",\n        \"complement\": \"Apto 10\",\n        \"name\": \"João Silva\",\n        \"phone\": \"11999998888\"\n      },\n      \"items\": [\n        {\n          \"id\": \"c1d2e3f4-a5b6-7890-1234-567890abcdef\",\n          \"name\": \"Teclado Mecânico\",\n          \"quantity\": 1\n        },\n        {\n          \"id\": \"c1d2e3f4-a5b6-7890-1234-567890abcdef\",\n          \"name\": \"Teclado Mecânico\",\n          \"quantity\": 1\n        }\n      ]\n    }\n  ],\n  \"pageable\": {\n    \"pageNumber\": -86074830,\n    \"pageSize\": 21387188,\n    \"offset\": -23638368,\n    \"paged\": true,\n    \"unpaged\": true,\n    \"sort\": {\n      \"empty\": true,\n      \"sorted\": true,\n      \"unsorted\": true\n    }\n  },\n  \"last\": true,\n  \"totalPages\": -52039601,\n  \"totalElements\": -69959347,\n  \"size\": 12629516,\n  \"number\": 54034248,\n  \"sort\": {\n    \"empty\": false,\n    \"sorted\": false,\n    \"unsorted\": true\n  },\n  \"first\": false,\n  \"numberOfElements\": 55601584,\n  \"empty\": false\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "couriers",
+							"item": [
+								{
+									"name": "{courierId}",
+									"item": [
+										{
+											"name": "Busca um entregador pelo ID.",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/couriers/:courierId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"couriers",
+														":courierId"
+													],
+													"variable": [
+														{
+															"key": "courierId",
+															"value": "27dfb79f-6bba-4812-bb20-11cbfa50d40e",
+															"description": "(Required) ID do entregador a ser buscado."
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Entregador encontrado.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/couriers/:courierId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"couriers",
+																":courierId"
+															],
+															"variable": [
+																{
+																	"key": "courierId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"1a2b3c4d-5e6f-7890-abcd-ef1234567890\",\n  \"name\": \"João Entregador\",\n  \"phone\": \"11998877665\",\n  \"fulfilledDeliveriesQuantity\": 50,\n  \"pendingDeliveriesQuantity\": 3,\n  \"pendingDeliveries\": [\n    {\n      \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n      \"assignedAt\": \"1983-07-13T00:23:12.714Z\",\n      \"amountOwned\": 12.5\n    },\n    {\n      \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n      \"assignedAt\": \"1952-02-11T09:27:57.294Z\",\n      \"amountOwned\": 12.5\n    }\n  ],\n  \"lastFulfilledDeliveryAt\": \"1952-08-14T23:17:51.805Z\"\n}"
+												},
+												{
+													"name": "Entregador não encontrado.",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/couriers/:courierId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"couriers",
+																":courierId"
+															],
+															"variable": [
+																{
+																	"key": "courierId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "Atualiza os dados de um entregador existente.",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"Maria Silva\",\n  \"phone\": \"11987654321\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/couriers/:courierId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"couriers",
+														":courierId"
+													],
+													"variable": [
+														{
+															"key": "courierId",
+															"value": "56d70dd1-0bc5-425c-9fad-a91831188098",
+															"description": "(Required) ID do entregador a ser atualizado."
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Entregador atualizado com sucesso (No Content).",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"Maria Entregadora\",\n  \"phone\": \"11987654321\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/couriers/:courierId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"couriers",
+																":courierId"
+															],
+															"variable": [
+																{
+																	"key": "courierId"
+																}
+															]
+														}
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Requisição inválida (erros de validação).",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"Maria Entregadora\",\n  \"phone\": \"11987654321\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/couriers/:courierId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"couriers",
+																":courierId"
+															],
+															"variable": [
+																{
+																	"key": "courierId"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Entregador não encontrado.",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"Maria Entregadora\",\n  \"phone\": \"11987654321\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/couriers/:courierId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"couriers",
+																":courierId"
+															],
+															"variable": [
+																{
+																	"key": "courierId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "payout-calculation",
+									"item": [
+										{
+											"name": "Calcula o valor de pagamento para um entregador com base na distância.",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"distanceInKm\": 5.5\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/couriers/payout-calculation",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"couriers",
+														"payout-calculation"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Cálculo de pagamento realizado com sucesso.",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"distanceInKm\": 10.5\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/couriers/payout-calculation",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"couriers",
+																"payout-calculation"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"payoutFee\": 25\n}"
+												},
+												{
+													"name": "Requisição inválida",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"distanceInKm\": 10.5\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/couriers/payout-calculation",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"couriers",
+																"payout-calculation"
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "Cria um novo entregador.",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"Maria Entregadora\",\n  \"phone\": \"11987654321\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/couriers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"couriers"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Entregador criado com sucesso.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"Maria Entregadora\",\n  \"phone\": \"11987654321\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/couriers",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"couriers"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": \"1a2b3c4d-5e6f-7890-abcd-ef1234567890\",\n  \"name\": \"João Entregador\",\n  \"phone\": \"11998877665\",\n  \"fulfilledDeliveriesQuantity\": 50,\n  \"pendingDeliveriesQuantity\": 3,\n  \"pendingDeliveries\": [\n    {\n      \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n      \"assignedAt\": \"1983-07-13T00:23:12.714Z\",\n      \"amountOwned\": 12.5\n    },\n    {\n      \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n      \"assignedAt\": \"1952-02-11T09:27:57.294Z\",\n      \"amountOwned\": 12.5\n    }\n  ],\n  \"lastFulfilledDeliveryAt\": \"1952-08-14T23:17:51.805Z\"\n}"
+										},
+										{
+											"name": "Requisição inválida (erros de validação).",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"Maria Entregadora\",\n  \"phone\": \"11987654321\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/couriers",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"couriers"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Lista todos os entregadores com paginação.",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/couriers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"couriers"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0",
+													"description": "Número da página (baseado em zero).",
+													"disabled": true
+												},
+												{
+													"key": "size",
+													"value": "20",
+													"description": "Número de elementos por página.",
+													"disabled": true
+												},
+												{
+													"key": "sort",
+													"value": "aute veniam quis",
+													"description": "Critérios de ordenação",
+													"disabled": true
+												},
+												{
+													"key": "sort",
+													"value": "culpa qui",
+													"description": "Critérios de ordenação",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Lista de entregadores paginada.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/couriers?page=0&size=20&sort=culpa qui",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"couriers"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0",
+															"description": "Número da página (baseado em zero)."
+														},
+														{
+															"key": "size",
+															"value": "20",
+															"description": "Número de elementos por página."
+														},
+														{
+															"key": "sort",
+															"value": "culpa qui",
+															"description": "Critérios de ordenação"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"content\": [\n    {\n      \"id\": \"1a2b3c4d-5e6f-7890-abcd-ef1234567890\",\n      \"name\": \"João Entregador\",\n      \"phone\": \"11998877665\",\n      \"fulfilledDeliveriesQuantity\": 50,\n      \"pendingDeliveriesQuantity\": 3,\n      \"pendingDeliveries\": [\n        {\n          \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n          \"assignedAt\": \"1996-09-29T16:44:56.225Z\",\n          \"amountOwned\": 12.5\n        },\n        {\n          \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n          \"assignedAt\": \"1948-11-16T23:34:14.882Z\",\n          \"amountOwned\": 12.5\n        }\n      ],\n      \"lastFulfilledDeliveryAt\": \"2002-11-19T10:47:39.791Z\"\n    },\n    {\n      \"id\": \"1a2b3c4d-5e6f-7890-abcd-ef1234567890\",\n      \"name\": \"João Entregador\",\n      \"phone\": \"11998877665\",\n      \"fulfilledDeliveriesQuantity\": 50,\n      \"pendingDeliveriesQuantity\": 3,\n      \"pendingDeliveries\": [\n        {\n          \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n          \"assignedAt\": \"1945-07-07T15:22:46.568Z\",\n          \"amountOwned\": 12.5\n        },\n        {\n          \"id\": \"f0e1d2c3-b4a5-6789-0123-456789abcdef\",\n          \"assignedAt\": \"1960-05-04T19:55:03.800Z\",\n          \"amountOwned\": 12.5\n        }\n      ],\n      \"lastFulfilledDeliveryAt\": \"2017-06-23T15:43:00.391Z\"\n    }\n  ],\n  \"pageable\": {\n    \"pageNumber\": 73079307,\n    \"pageSize\": -20710188,\n    \"offset\": -82612552,\n    \"paged\": true,\n    \"unpaged\": true,\n    \"sort\": {\n      \"empty\": false,\n      \"sorted\": true,\n      \"unsorted\": true\n    }\n  },\n  \"last\": false,\n  \"totalPages\": -89725460,\n  \"totalElements\": -69945148,\n  \"size\": -57715129,\n  \"number\": -42327619,\n  \"sort\": {\n    \"empty\": false,\n    \"sorted\": true,\n    \"unsorted\": false\n  },\n  \"first\": false,\n  \"numberOfElements\": 75418831,\n  \"empty\": false\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
